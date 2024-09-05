@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+*{
+    margin:0;
+    padding: 0;
+    font-family: "Lora", serif;
+}
+.navbar li{
+    list-style:none;
+    font-size: 1.5rem;
+    margin: 0 15px;
+    cursor: pointer;
+}
+.logo{
+    font-size: 3rem;
+}
+.container{
+    max-width: 80vw;
+    height: 60px;
+}
+li{
+    position: relative;
+}
+ul li::after{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    right: 50%;
+    background-color: #1DA1F2;
+    transition: 0.15s ease;
+}
+ul li:hover::after{
+    left: 0;
+    right: 0;
+    width: 100%;
+}
+ul li:hover{
+    color: rgb(19, 180, 30);
+}
+ul :nth-child(1){
+   color: #1DA1F2;
+}
