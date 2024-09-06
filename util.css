@@ -17,3 +17,9 @@
 .align-center{
     align-items: center;
 }
+.text-center{
+    text-align: center;
+}
+.font-large{
+    font-size: 34px;
+}

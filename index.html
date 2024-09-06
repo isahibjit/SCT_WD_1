@@ -8,18 +8,52 @@
     <link rel="stylesheet" href="util.css" />
   </head>
   <body>
-    <div class="container mx-auto">
-      <header >
+    <div class="head">
+      <div class="container mx-auto">
+        <header>
           <nav class="flex justify-space mx-auto align-center">
-        <div class="logo font-bold">Sunny</div>
-          <ul class="navbar flex ">
-            <li>Home</li>
-            <li>About</li>
-            <li>Services</li>
-            <li>Contact us</li>
-          </ul>
-        </nav>
-      </header>
+            <div class="logo font-bold">Sunny</div>
+            <ul class="navbar flex">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Services</a></li>
+              <li><a href="#">Contact us</a></li>
+            </ul>
+          </nav>
+        </header>
+      </div>
     </div>
+    <main>
+      <section class="font-bold font-large">
+        <h1 class="text-center">Home</h1>
+        <div class="sec1">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque
+          commodi nihil maxime accusantium ipsam deleniti quae quaerat unde iure
+          perspiciatis animi inventore veritatis provident, quisquam in
+          asperiores cum. Id deleniti amet beatae reprehenderit distinctio
+          placeat voluptatibus molestiae, odit a laborum sint nulla. Iste,
+          placeat! Suscipit placeat illo perspiciatis. Repellat vero sequi nobis
+          fugiat nostrum corporis laborum quaerat explicabo culpa nulla, amet
+          ipsa sunt autem ab dicta necessitatibus ut deleniti facere quisquam
+          nihil itaque! Id molestiae nesciunt earum accusantium recusandae
+          voluptates iure magnam sunt illo quis reiciendis, distinctio alias
+          enim. Obcaecati commodi consectetur dolores maxime tenetur neque quos
+          aspernatur rem nesciunt!
+        </div>
+      </section>
+    </main>
+    <script>
+      document.addEventListener("scroll", () => {
+        const head = document.querySelector(".head");
+        const side = document.querySelector("ul")
+        if (window.scrollY > 0) {
+          head.classList.add("scrolled");
+          side.classList.add("scrolled");
+        } else {
+          head.classList.remove("scrolled");
+          side.classList.remove("scrolled")
+        }
+      });
+    </script>
   </body>
 </html>

@@ -1,44 +1,103 @@
-@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
-*{
-    margin:0;
-    padding: 0;
-    font-family: "Lora", serif;
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Lora", serif;
+  color: #f0f0f0;
 }
-.navbar li{
-    list-style:none;
-    font-size: 1.5rem;
-    margin: 0 15px;
-    cursor: pointer;
+.container {
+  max-width: 80vw;
+  height: 70px;
 }
-.logo{
-    font-size: 3rem;
+body {
+  background-color: #004987;
+  padding-top: 80px;
+  padding-bottom: 2344px;
 }
-.container{
-    max-width: 80vw;
-    height: 60px;
+.navbar li {
+  list-style: none;
+  font-size: 1.5rem;
+  margin: 0 15px;
+  cursor: pointer;
 }
-li{
-    position: relative;
+ul li a {
+  color: #f0f0f0;
+  transition: color 0.5s ease-in-out;
 }
-ul li::after{
-    content: "";
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: 0;
-    left: 50%;
-    right: 50%;
-    background-color: #1DA1F2;
-    transition: 0.15s ease;
+.logo {
+  font-size: 3rem;
 }
-ul li:hover::after{
-    left: 0;
-    right: 0;
-    width: 100%;
+li {
+  position: relative;
 }
-ul li:hover{
-    color: rgb(19, 180, 30);
+ul li::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 50%;
+  right: 50%;
+  background-color: #1da1f2;
+  transition: 0.15s ease;
 }
-ul :nth-child(1){
-   color: #1DA1F2;
+ul li:hover::after {
+  left: 0;
+  right: 0;
+  width: 100%;
+}
+ul li a:hover {
+  color: rgb(19, 180, 30);
+}
+ul li:nth-child(1) a {
+  color: rgb(19, 180, 30);
+}
+ul li a {
+  text-decoration: none;
+}
+.head {
+  background-color: rgb(34, 32, 32);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  border-bottom: 2px solid black;
+  z-index: 100;
+  transition: background-color 0.5s ease-in-out;
+}
+.head.scrolled {
+  background-color: #001f3f;
+  opacity: 0.98;
+}
+.head.scrolled nav a {
+  color: #f5f5dc;
+}
+.sec1 {
+  font-size: 23px;
+  font-weight: 400;
+  margin: 23px 8px;
+}
+@media (max-width:768px){
+    ul{
+        flex-direction: column;
+        position: fixed;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background-color:  rgb(34, 32, 32);
+        transition: background-color 0.4s ease-in-out;
+    }
+    ul.scrolled{
+        background-color: #001f3f;
+        opacity: 0.98;
+    }
+    ul li{
+        padding: 15px;
+    }
+    ul li a{
+        color: white;
+    }
+    body{
+        padding-right: 180px;
+    }
 }
